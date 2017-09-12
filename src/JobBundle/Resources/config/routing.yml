@@ -2,6 +2,7 @@ job_homepage:
     path:     /
     defaults: { _controller: JobBundle:Default:index }
 
+# Category
 category_list:
     path:     /category/list
     defaults: { _controller: JobBundle:Category:list }
@@ -17,3 +18,20 @@ category_edit:
 category_delete:
     path:     /category/{id}/delete
     defaults: { _controller: JobBundle:Category:delete }
+
+# Job
+job_list:
+    path:     /job/list
+    defaults: { _controller: JobBundle:Job:list }
+
+job_create:
+    path:     /job/create
+    defaults: { _controller: JobBundle:Job:create }
+
+job_edit:
+    path:     /job/{id}/edit
+    defaults: { _controller: JobBundle:Job:edit }
+
+job_delete:
+    path:     /job/{id}/delete
+    defaults: { _controller: JobBundle:Job:delete }

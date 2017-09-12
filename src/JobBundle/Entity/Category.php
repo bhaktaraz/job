@@ -35,6 +35,11 @@ class Category
      */
     private $enabled = true;
 
+    public function __toString()
+    {
+        return $this->name;
+    }
+
     /**
      * Get id
      *

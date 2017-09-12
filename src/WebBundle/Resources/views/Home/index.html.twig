@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Smart Job | Home</title>
+
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" type="text/css" />
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="col-md-4">
+        <div class="panel">
+
+            <div class="panel-heading">
+                Recent Jobs
+            </div>
+
+            <div class="panel-body">
+                <ul>
+                    {% for job in recentJobs %}
+                        <li><a href="{{ path('web_job_detail', {'id' : job.id}) }}">{{ job.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <form method="get">
+            <input type="text" name="keyword" size="45">
+            <input type="submit">
+        </form>
+    </div>
+
+</div>
+
+</body>
+
+</html>

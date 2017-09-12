@@ -1,0 +1,7 @@
+web_homepage:
+    path:     /
+    defaults: { _controller: WebBundle:Home:index }
+
+web_job_detail:
+    path:     /job/{id}
+    defaults: { _controller: WebBundle:Home:detail }

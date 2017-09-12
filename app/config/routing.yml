@@ -1,4 +1,8 @@
+web:
+    resource: "@WebBundle/Resources/config/routing.yml"
+    prefix:   /
+
 job:
     resource: "@JobBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /admin
 

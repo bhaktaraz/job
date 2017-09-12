@@ -1,0 +1,30 @@
+{% extends '@Job/layout.html.twig' %}
+
+{% block content %}
+<h3>Jobs</h3>
+
+    <a href="{{ path('job_create') }}" class="btn btn-primary">Create New</a>
+
+<table class="table">
+<tr>
+    <th>SN</th>
+    <th>Title</th>
+    <th>Category</th>
+    <th>Action</th>
+</tr>
+
+{% for job in jobs %}
+
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ job.title }}</td>
+        <td>{{ job.category.name }}</td>
+        <td><a href="{{ path('job_delete', {'id' : job.id}) }}" onclick="return confirm('Are you sure?');">Delete</a>
+        <a href="{{ path('job_edit', {'id' : job.id}) }}">Edit</a></td>
+    </tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}
